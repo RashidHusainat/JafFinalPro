@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Course>
+
+
+
+<!-- Latest property -->
+<section id="aa-latest-property">
+    <div class="container">
+        <div class="aa-latest-property-area">
+            <div class="aa-title">
+                <h2>Latest Courses</h2>
+                <span></span>
+                <p><h1 class="text-danger">Not Allow for fucken stupid and weared(On hand guy !!) </h1></p>
+            </div>
+            <div class="aa-latest-properties-content">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4">
+                            <article class="aa-properties-item">
+                                <a href="#" class="aa-properties-item-img">
+                                    <img src="img/item/1.jpg" alt="img">
+                                </a>
+                                <div class="aa-tag for-sale">
+                                    @item.Venu.VenuName
+                                </div>
+                                <div class="aa-properties-item-content">
+                                    <div class="aa-properties-info">
+                                        <span>Start Date</span>
+                                        <span>@item.StartDate.ToShortDateString()</span>
+                                        <span>Category</span>
+                                        <span>@item.Category.CategoryName</span>
+                                    </div>
+                                    <div class="aa-properties-about">
+                                        <h3><a asp-action="CourseDetails" asp-controller="Home" asp-route-id="@item.CourseId">@item.CourseName</a></h3>
+                                        <p>@item.CourseDesc</p>
+                                    </div>
+                                    <div class="aa-properties-detial">
+                                        <span class="aa-price">
+                                            @item.Price JD
+                                        </span>
+                                        <a class="aa-secondary-btn" asp-action="CourseDetails" asp-controller="Home" asp-route-id="@item.CourseId">View Details</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / Latest property -->
