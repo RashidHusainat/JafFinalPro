@@ -26,8 +26,15 @@ using JafFinalPro.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\Views\_ViewImports.cshtml"
+using JafFinalPro.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"36d7d83ce87ffd42c7ad0be6dc87192d64f74ecf", @"/Views/Shared/Components/Course/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"00637b59605ae0461fff3f31ba5c8b1e830a6a7b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"95df7de9aeb05ef1689f42ad611f8d104fd49e9e", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Course_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Course>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "CourseDetails", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -116,7 +123,7 @@ using JafFinalPro.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</span>\r\n                                    </div>\r\n                                    <div class=\"aa-properties-about\">\r\n                                        <h3>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d7d83ce87ffd42c7ad0be6dc87192d64f74ecf6786", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d7d83ce87ffd42c7ad0be6dc87192d64f74ecf6983", async() => {
 #nullable restore
 #line 34 "C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\Views\Shared\Components\Course\Default.cshtml"
                                                                                                                          Write(item.CourseName);
@@ -171,7 +178,7 @@ using JafFinalPro.Models;
 #line hidden
 #nullable disable
             WriteLiteral(" JD\r\n                                        </span>\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d7d83ce87ffd42c7ad0be6dc87192d64f74ecf10443", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d7d83ce87ffd42c7ad0be6dc87192d64f74ecf10640", async() => {
                 WriteLiteral("View Details");
             }
             );
