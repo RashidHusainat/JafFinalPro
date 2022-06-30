@@ -154,3 +154,9 @@ C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\JafFinalPr
 C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\ref\JafFinalPro.dll
 C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\JafFinalPro.pdb
 C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\JafFinalPro.genruntimeconfig.cache
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\JafFinalPro.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Create.cshtml.g.cs
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Delete.cshtml.g.cs
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Details.cshtml.g.cs
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Edit.cshtml.g.cs
+C:\Users\Lenovo\source\repos\JafFinalPro\JafFinalPro\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Index.cshtml.g.cs

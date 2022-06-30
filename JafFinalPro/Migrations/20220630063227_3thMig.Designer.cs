@@ -4,14 +4,16 @@ using JafFinalPro.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JafFinalPro.Migrations
 {
     [DbContext(typeof(JafDbContext))]
-    partial class JafDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220630063227_3thMig")]
+    partial class _3thMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
