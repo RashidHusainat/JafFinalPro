@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JafFinalPro.Data;
 using JafFinalPro.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace JafFinalPro.Areas.Admin.Controllers
 {
@@ -14,10 +15,11 @@ namespace JafFinalPro.Areas.Admin.Controllers
     public class SlidersController : Controller
     {
         private readonly JafDbContext _context;
-
-        public SlidersController(JafDbContext context)
+        private IWebHostEnvironment _host;
+        public SlidersController(JafDbContext context,IWebHostEnvironment host )
         {
             _context = context;
+            _host = host;
         }
 
         // GET: Admin/Sliders
