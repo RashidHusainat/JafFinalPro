@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using JafFinalPro.Data;
 using JafFinalPro.Models;
 using Microsoft.AspNetCore.Hosting;
+using JafFinalPro.Models.ViewModels;
+using System.IO;
 
 namespace JafFinalPro.Areas.Admin.Controllers
 {
@@ -57,15 +59,55 @@ namespace JafFinalPro.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SliderId,SliderTitle,SliderSubTitle,Location,DiscountPerc,Price,BtnTxt,BtnUrl,SliderImg,IsDeleted,IsActive,CreationDate")] Slider slider)
+        public async Task<IActionResult> Create(CreateSliderViewModel slider)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(slider);
+               string imgname= UploadNewFile(slider);
+                Slider _slider = new Slider {
+
+                    DiscountPerc = slider.DiscountPerc,
+                    CreationDate = DateTime.Now,
+                    BtnTxt = slider.BtnTxt,
+                    BtnUrl = slider.BtnUrl,
+                    IsActive = true,
+                    IsDeleted=false,
+                    Location=slider.Location,
+                    Price=slider.Price,
+                    SliderSubTitle=slider.SliderSubTitle,
+                    SliderTitle=slider.SliderTitle,
+                    SliderImg=imgname
+                    
+                
+                };
+
+
+                _context.Sliders.Add(_slider);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(slider);
+        }
+
+        public string UploadNewFile(CreateSliderViewModel model)
+        {
+            string newFullImageName=null;
+            if (model.SliderImg!=null)
+            {
+                string fileRoot = Path.Combine(_host.WebRootPath, @"Images\");
+                string newFileName = Guid.NewGuid() + "_" + model.SliderImg.FileName;
+                string fullpath = Path.Combine(fileRoot, newFileName);
+
+                using (var myfile = new FileStream(fullpath, FileMode.Create))
+                {
+                  model.SliderImg.CopyTo(myfile);
+                }
+                newFullImageName = @"~/Images/" + newFileName;
+
+                return newFullImageName;
+            }
+
+            return newFullImageName;
         }
 
         // GET: Admin/Sliders/Edit/5
