@@ -27,7 +27,5 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Deploy
-      run: |
-        iisreset /stop
-        x copy /s /y .\myapp\* C:\Users\r-husainat\source
-        iisreset /start
+      run: x copy /s /y .\myapp\* C:\Users\r-husainat\source
+
